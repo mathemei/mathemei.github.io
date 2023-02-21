@@ -1,0 +1,89 @@
+body {
+    display: inline-block;
+    font-family: arial, sans-serif;
+    margin: 20px auto;
+    width:95%;
+    margin-left:2%;
+    color : #223454;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    padding:0;
+    justify-content: left; 
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    display:block;
+    min-width: 120px;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.6rem 0;
+    text-decoration: none;
+    color: #223454;
+    border: 1px solid #223454;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+  background-color: #314A78;
+  border: 1px solid #314A78;
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+  /*line-height: 1.8;*/
+}
+
+.date {
+    color: #223454;
+}
+
+.location{
+    color: #223454;
+}
+
+.name{
+    font-size:25px;
+    color: #223454;
+}
+
+#meije {
+  object-position: 10px;
+}
+
+.main{
+    font-size:70px;
+    color: #314A78;
+}
