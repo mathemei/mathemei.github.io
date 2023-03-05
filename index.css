@@ -53,14 +53,6 @@ th, td {
   /*line-height: 1.8;*/
 }
 
-.date {
-    color: #223454;
-}
-
-.location{
-    color: #223454;
-}
-
 .name{
     font-size:30px;
     color: #223454;
@@ -68,7 +60,12 @@ th, td {
 }
 
 .main{
-    font-size:70px;
+    font-size:36px;
+    color: #314A78;
+}
+
+.main_text {
+    font-size:30px;
     color: #314A78;
 }
 
@@ -86,12 +83,11 @@ th, td {
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
-  color: red;
+  margin-top: -20px;
+  color: #c9d4e9;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
@@ -101,9 +97,13 @@ th, td {
   border-radius: 3px 0 0 3px;
 }
 
+.prev {
+    left : 0;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  color: #223454;
 }
 
 /* The dots/bullets/indicators */
@@ -112,14 +112,14 @@ th, td {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #c9d4e9;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #223454;
 }
 
 /* Fading animation */
@@ -131,4 +131,113 @@ th, td {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 2}
+}
+
+
+
+/*timeline*/
+
+.timeline-content {
+  margin-left: 20%;
+  width: 70%;
+  padding: 10px;
+}
+
+.timeline {
+  border-left: 1px solid #223454;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;    
+  margin: 50px auto;  
+  letter-spacing: 0.5px;   
+  position: relative;  
+  padding: 40px;   
+  list-style: none;
+  text-align: left;  
+  line-height: 1.4em;
+  max-width: 55%; 
+}
+
+.event {
+    padding-bottom: 50px * 0.5;
+    margin-bottom: 40px;  
+    position: relative;
+}
+
+
+.event:last-of-type { 
+    padding-bottom: 0;
+    margin-bottom: 0; 
+    border: none;      
+}
+
+
+.event:before, .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+
+.event:before {
+    left: -260px;      
+    content: attr(data-date) ;
+    text-align: center;
+    font-weight: 100;   
+    opacity: 0.7; 
+}
+
+.event:after {
+      box-shadow: 0 0 0 1px #223454;    
+      left: -48px;        
+      background: white;    
+      border-radius: 50%;  
+      height: 15px;
+      width: 15px;
+      content: "";
+      top: 5px;
+    }
+
+
+/*flip cards*/
+.scene {
+  display: inline-block;
+  width: 500px;
+  height: 400px;
+  margin: 40px 0;
+  perspective: 800px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: crimson;
+}
+
+.card__face--back {
+  background: slateblue;
+  transform: rotateY(180deg);
 }
