@@ -1,10 +1,10 @@
 body {
     display: inline-block;
-    font-family: arial, sans-serif;
+    font-family: Montserrat;
     margin: 20px auto;
     width:80%;
     margin-left:10%;
-    margin-right:5%;
+    margin-right:10%;
     color : #223454;
 }
 
@@ -64,7 +64,7 @@ th, td {
 
 .name{
     font-size:30px;
-    color: #223454;
+    color:  #314A78;
     text-decoration: none;
 }
 
@@ -76,6 +76,19 @@ th, td {
 .main_text {
     font-size:30px;
     color: #314A78;
+}
+
+.bear {
+    font-family: arial, sans-serif;
+    font-size: 28px;
+    color: #314A78;
+}
+
+.subject {
+    margin : 0px;
+    font-size: 16px;
+    color: #92a9d3;
+    display: inline-block;
 }
 
 /* Slideshow container */
@@ -118,8 +131,8 @@ th, td {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #c9d4e9;
   border-radius: 50%;
@@ -148,7 +161,7 @@ th, td {
 
 .timeline-content {
   margin-left: 20%;
-  width: 70%;
+  width: 80%;
   padding: 10px;
 }
 
@@ -163,7 +176,7 @@ th, td {
   list-style: none;
   text-align: left;  
   line-height: 1.4em;
-  max-width: 55%; 
+  max-width: 80%; 
 }
 
 .event {
@@ -188,7 +201,7 @@ th, td {
 
 
 .event:before {
-    left: -260px;      
+    left: -280px;      
     content: attr(data-date) ;
     text-align: center;
     font-weight: 100;   
@@ -210,9 +223,9 @@ th, td {
 /*flip cards*/
 .scene {
   display: inline-block;
-  width: 500px;
-  height: 400px;
-  margin: 40px 0;
+  width: 400px;
+  height: 300px;
+  margin: 10px 10px;
   perspective: 800px;
 }
 
@@ -226,6 +239,10 @@ th, td {
   transition: transform 1s;
 }
 
+.card:hover {
+    transform: scale(1.05);
+}
+
 .card.is-flipped {
   transform: translateX(-100%) rotateY(-180deg);
 }
@@ -234,19 +251,51 @@ th, td {
   position: absolute;
   width: 100%;
   height: 100%;
-  line-height: 260px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
+  text-align: left;
   backface-visibility: hidden;
+  border-radius: 25px;
 }
 
 .card__face--front {
-  background: crimson;
+    border: solid #314A78 1px;
+    padding : 20px;
+    color: #223454;
+   font-family: 'Montserrat';
+   font-weight: 300;
 }
 
 .card__face--back {
-  background: slateblue;
+  background: #92a9d3;
   transform: rotateY(180deg);
+  padding : 20px;
+  color : white;
+}
+
+.tag {
+  padding: 4px 8px;
+  border: 1px solid #92a9d3;
+  border-radius: 50px;
+  margin : 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #92a9d3;
+  display: inline-block;
+}
+
+.year {
+    padding: 4px 8px;
+    border-radius: 50px;
+    margin : 2px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    background-color: #92a9d3;
+    opacity : 0.5;
+    display: inline-block;
+}
+
+.card__details {
+  /* Add space around the details */
+  padding: 16px 8px 8px 8px;
 }
