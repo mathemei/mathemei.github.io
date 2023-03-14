@@ -97,6 +97,12 @@ th, td {
     display: inline-block;
 }
 
+.diploma{
+    margin : 5px;
+    font-size: 16px;
+    color: #92a9d3;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 900px;
@@ -264,6 +270,7 @@ th, td {
 }
 
 .card__face--front {
+    font-size: 18px;
     border: solid #314A78 1px;
     padding : 20px;
     color: #223454;
@@ -272,10 +279,27 @@ th, td {
 }
 
 .card__face--back {
+    font-size: 15px;
   background: #92a9d3;
   transform: rotateY(180deg);
   padding : 20px;
   color : white;
+}
+
+.card__face--back a{
+    text-decoration: none;
+    color: white;
+}
+
+.link{
+    padding: 4px 8px;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin : 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
 }
 
 .tag {
@@ -305,4 +329,15 @@ th, td {
 .card__details {
   /* Add space around the details */
   padding: 16px 8px 8px 8px;
+}
+
+.mention{
+    padding: 4px 8px;
+  border: 1px solid #92a9d3;
+  border-radius: 50px;
+  margin : 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #92a9d3;
+  display: inline-block;
 }
