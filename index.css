@@ -389,3 +389,13 @@ td.table-separator {
 .contact{
     font-size: 30px;
 }
+
+
+a{
+    text-decoration: none;
+    color: #223454;
+} 
+
+a:hover {
+  color: #92a9d3;
+}
