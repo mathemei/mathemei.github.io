@@ -57,14 +57,18 @@ body {
   color: #92a9d3;
 }
 
-th, td {
-  padding: 15px;
-  /*line-height: 1.8;*/
+td, tr {
+  padding: 5px;
+}
+
+td.table-separator {
+    border-bottom: 1px solid #92a9d3;
+    padding: 5px;
 }
 
 .name{
     font-size:30px;
-    color:  #314A78;
+    color: #314A78;
     text-decoration: none;
 }
 
@@ -340,4 +344,48 @@ th, td {
   font-weight: 600;
   color: #92a9d3;
   display: inline-block;
+}
+
+.skills-category{
+    width: 1000px;
+    padding: 10px;
+    margin: 10;
+    border-radius: 25px;
+    border: 1px solid #223454;
+    font-size: 18px;
+}
+
+.skills-title{
+    margin : 5px;
+    font-size: 16px;
+}
+
+.skills-item{
+    padding: 4px 8px;
+    border: 1px solid #92a9d3;
+  border-radius: 50px;
+  margin : 2px;
+  font-size: 15px;
+  font-weight: 400;
+      color: #92a9d3;
+  display: inline-block;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin: auto;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact{
+    font-size: 30px;
 }
